@@ -1,7 +1,7 @@
 <?php
     session_start();
     include("./file_write.php");
-    $db = mysqli_connect('localhost', 'root', '', 'finalproject');
+    $db = mysqli_connect('eu-cdbr-west-02.cleardb.net', 'bc32387609d527', '6870312e', 'heroku_37c37043f7fc84a');
     $cart_games_query = "SELECT * FROM shoppingcart WHERE userid='" . $_SESSION['userid'] . "'";
     $results = mysqli_query($db, $cart_games_query);
     $shoppingcartitems = mysqli_fetch_all($results,MYSQLI_ASSOC);
