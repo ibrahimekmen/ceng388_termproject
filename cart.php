@@ -16,7 +16,7 @@
     if (isset($_POST['removeFromCart'])) {
         $gameid = $_POST['gameid'];
         $userid = $_SESSION['userid'];
-        $db = mysqli_connect('localhost', 'root', '', 'finalproject');
+        $db = mysqli_connect('eu-cdbr-west-02.cleardb.net', 'bc32387609d527', '6870312e', 'heroku_37c37043f7fc84a');
         $remove_from_cart_query = "DELETE FROM shoppingcart WHERE gameid='". $gameid . "' AND userid='". $userid . "' LIMIT 1;";
         mysqli_query($db, $remove_from_cart_query);
         echo "You have removed " . $_POST['name']. " from your cart";
