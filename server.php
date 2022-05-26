@@ -6,7 +6,7 @@
     $email    = "";
     $errors = array(); 
 
-    $db = mysqli_connect('localhost', 'root', 'Z@h1rM0n3y', 'heroku_37c37043f7fc84a');
+    $db = mysqli_connect('eu-cdbr-west-02.cleardb.net', 'bc32387609d527', '6870312e', 'heroku_37c37043f7fc84a');
 
     if (isset($_POST['reg_user'])) {
         $username = mysqli_real_escape_string($db, $_POST['username']);
