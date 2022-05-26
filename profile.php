@@ -42,7 +42,7 @@
         </div>
         <h1>Profile</h1>
         <?php
-            $db = mysqli_connect('localhost', 'root', '', 'finalproject');
+            $db = mysqli_connect('eu-cdbr-west-02.cleardb.net', 'bc32387609d527', '6870312e', 'heroku_37c37043f7fc84a');
             $image_check_query = "SELECT * FROM USERS WHERE id=" . $_SESSION['userid'] . ";";
             $result = mysqli_query($db, $image_check_query);
             $user =  mysqli_fetch_assoc($result);
