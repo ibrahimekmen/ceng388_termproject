@@ -21,7 +21,7 @@ if (isset($_POST['upload'])) {
                 $fileNameNew = uniqid('', true) . "." . $fileActualExt;
                 $fileDestionation = "./uploads/" . $fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestionation);
-                $db = mysqli_connect('localhost', 'root', '', 'finalproject');
+                $db = mysqli_connect('eu-cdbr-west-02.cleardb.net', 'bc32387609d527', '6870312e', 'heroku_37c37043f7fc84a');
                 $update_profile_picture = "UPDATE users SET image='$fileNameNew' WHERE id=$userid";
                 $result = mysqli_query($db, $update_profile_picture);
                 echo "profile pic upload success";
